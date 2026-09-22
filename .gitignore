@@ -1,0 +1,35 @@
+# Local secrets and environments
+.env
+.venv/
+venv/
+.vscode/
+.DS_Store
+
+# Python build and cache files
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+build/
+dist/
+.ipynb_checkpoints/
+
+# Dataset files are not redistributed with this repository.
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+data/splits/*
+!data/splits/.gitkeep
+
+# Training artifacts and model weights
+experiments/*/checkpoints/
+experiments/*/logs/
+*.pth
+*.pt
+*.h5
+*.ckpt
+
+# Generated prediction files; keep the directory itself.
+results/sample_predictions/*
+!results/sample_predictions/.gitkeep

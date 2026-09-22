@@ -1,0 +1,9 @@
+image_size: 224
+num_classes: 4
+batch_size: 16
+learning_rate: 0.0001
+epochs: 25
+seed: 42
+num_workers: 2
+backbone: resnet50
+freeze_backbone: true
