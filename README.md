@@ -154,6 +154,14 @@ Classification test details, per-class metrics, and confusion matrices are in `r
 - Matplotlib, seaborn, PyYAML, tqdm
 - GitHub Actions for basic test CI
 
+- ## Security Review and Vulnerability Assessment
+
+AI-assisted tools may be used during development to help identify potential security vulnerabilities, detect insecure coding practices, and highlight areas of the codebase that may require further review. These tools serve as an additional layer of support in the security review process and do not replace manual code review or testing.
+
+Any identified issues should be carefully reviewed and verified before corrective measures are implemented. While AI-assisted analysis can help improve security awareness and identify potential risks, it cannot guarantee that all vulnerabilities will be detected or that the application is completely secure.
+
+Regular testing, dependency checks, and code reviews remain important parts of maintaining the security and reliability of the project.
+
 ## License
 
 This project is released under the [MIT License](LICENSE). Dataset access and usage remain subject to the BRISC2025 dataset terms.
