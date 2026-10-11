@@ -5,5 +5,10 @@ learning_rate: 0.0001
 epochs: 25
 seed: 42
 num_workers: 2
+device: auto
+resource_profile: auto
+gradient_accumulation_steps: 1
+mixed_precision: auto
 backbone: resnet50
-freeze_backbone: true
+freeze_backbone: false # Train the randomly initialized ResNet50 backbone end-to-end.
+classification_exclusion_manifest: configs/classification_duplicate_exclusions.json

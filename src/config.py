@@ -3,8 +3,6 @@
 from dataclasses import dataclass, field
 from pathlib import Path
 
-import torch
-
 
 @dataclass
 class Config:
@@ -18,14 +16,28 @@ class Config:
     epochs: int = 25
     seed: int = 42
     num_workers: int = 2
+    device: str = "auto"
+    resource_profile: str = "auto"
+    gradient_accumulation_steps: int = 1
+    mixed_precision: str = "auto"
+    pin_memory: bool | None = None
     backbone: str = "resnet50"
     freeze_backbone: bool = True
+    unet_features: tuple = (64, 128, 256, 512)
+    max_train_samples: int | None = None
+    max_val_samples: int | None = None
+    resume_from: str | None = None
+    classification_exclusion_manifest: str | None = "configs/classification_duplicate_exclusions.json"
     segmentation_threshold: float = 0.5
-    device: str = field(default_factory=lambda: "cuda" if torch.cuda.is_available() else "cpu")
 
     @property
     def data_dir(self) -> Path:
         return self.root_dir / "data"
+
+    @property
+    def brisc_dir(self) -> Path:
+        """Root of the supplied BRISC dataset (read-only source data)."""
+        return self.root_dir / "DATASETS" / "mri" / "brisc2025"
 
     @property
     def raw_dir(self) -> Path:

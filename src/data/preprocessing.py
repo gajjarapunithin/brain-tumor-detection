@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Optional
+from typing import Optional, Tuple
 
 import cv2
 import numpy as np
@@ -40,7 +40,7 @@ def build_image_transform(image_size: int, train: bool = False) -> transforms.Co
     operations = [transforms.ToPILImage(), transforms.Resize((image_size, image_size))]
     if train:
         operations.extend([transforms.RandomRotation(10), transforms.RandomHorizontalFlip()])
-    operations.extend([transforms.ToTensor(), transforms.Normalize(mean=[0.5], std=[0.5])])
+    operations.append(transforms.ToTensor())
     return transforms.Compose(operations)
 
 
@@ -59,3 +59,18 @@ def load_grayscale_image(path: Path, image_size: Optional[int] = None) -> np.nda
 def image_to_tensor(image: np.ndarray) -> torch.Tensor:
     """Convert a normalized 2-D image to a one-channel tensor."""
     return torch.from_numpy(image).float().unsqueeze(0)
+
+
+def transform_segmentation_pair(
+    image: np.ndarray, mask: np.ndarray, image_size: int, train: bool = False,
+) -> Tuple[torch.Tensor, torch.Tensor]:
+    """Resize and optionally flip an image/mask pair with categorical-safe sampling."""
+    image = resize_image(image, image_size, cv2.INTER_LINEAR)
+    mask = resize_image(mask, image_size, cv2.INTER_NEAREST)
+    if train and np.random.random() < 0.5:
+        image = np.ascontiguousarray(image[:, ::-1])
+        mask = np.ascontiguousarray(mask[:, ::-1])
+    image_tensor = image_to_tensor(image)
+    # BRISC binary masks have compressed grayscale edge bands near 0 and 255.
+    mask_tensor = torch.from_numpy((mask >= 128).astype(np.float32, copy=False)).unsqueeze(0)
+    return image_tensor, mask_tensor

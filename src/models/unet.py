@@ -31,12 +31,13 @@ class UNet(nn.Module):
         for feature in features:
             self.downs.append(DoubleConv(channels, feature))
             channels = feature
+        self.bottleneck = DoubleConv(features[-1], features[-1] * 2)
+        channels = features[-1] * 2
         for feature in reversed(features):
             self.ups.append(nn.ConvTranspose2d(channels, feature, 2, stride=2))
             self.ups.append(DoubleConv(feature * 2, feature))
             channels = feature
         self.pool = nn.MaxPool2d(2, 2)
-        self.bottleneck = DoubleConv(features[-1], features[-1] * 2)
         self.final_conv = nn.Conv2d(features[0], out_channels, 1)
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:

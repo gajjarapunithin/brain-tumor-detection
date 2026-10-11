@@ -1,18 +1,25 @@
+
 # Local secrets and environments
 .env
+.env.*
+!.env.example
 .venv/
 venv/
+venv_cuda/
 .vscode/
+.idea/
 .DS_Store
+Thumbs.db
 
 # Python build and cache files
 __pycache__/
-*.pyc
-*.pyo
+*.py[cod]
 *.egg-info/
 build/
 dist/
 .ipynb_checkpoints/
+.pytest_tmp*/
+.pytest_cache/
 
 # Dataset files are not redistributed with this repository.
 data/raw/*
@@ -22,9 +29,13 @@ data/processed/*
 data/splits/*
 !data/splits/.gitkeep
 
+# Also exclude the project's uppercase dataset directory
+DATASETS/
+
 # Training artifacts and model weights
 experiments/*/checkpoints/
 experiments/*/logs/
+experiments/*/runs/
 *.pth
 *.pt
 *.h5
@@ -33,3 +44,64 @@ experiments/*/logs/
 # Generated prediction files; keep the directory itself.
 results/sample_predictions/*
 !results/sample_predictions/.gitkeep
+
+# Generated outputs and temporary files
+outputs/
+*.log
+
+# Additional local virtual environment
+.venv312/
+
+# Temporary GPU smoke-test experiments
+experiments/gpu_cuda_smoke_*/
+
+# Generated analysis and inference outputs
+results/inference/
+results/ui_analyses/
+results/segmentation_test_review/
+
+# Internal development notes
+docs/SESSION_HANDOFF.md
+docs/PROGRESS.md
+
+# Local virtual environments
+.venv312/
+
+# Model checkpoints and weights
+*.pt
+*.pth
+*.ckpt
+*.h5
+
+# Temporary experiments and training artifacts
+experiments/gpu_cuda_smoke_*/
+experiments/*/checkpoints/
+experiments/*/logs/
+experiments/*/runs/
+
+# Local datasets and generated outputs
+DATASETS/
+data/raw/*
+data/processed/*
+results/inference/
+results/ui_analyses/
+results/segmentation_test_review/
+outputs/
+
+# Logs and temporary test artifacts
+*.log
+.pytest_cache/
+
+docs/SESSION_HANDOFF.md
+docs/PROGRESS.md
+
+# Generated results and evaluation outputs
+results/
+
+# Internal experiment documentation
+docs/EXPERIMENTS.md
+
+# Temporary pilot configurations
+configs/pilot_resume.yaml
+configs/pilot_resume_classification.yaml
+configs/pilot_smoke.yaml

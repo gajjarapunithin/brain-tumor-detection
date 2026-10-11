@@ -1,0 +1,37 @@
+QWidget {
+  background: #11120f; color: #f3f1e9;
+  font-family: "Segoe UI"; font-size: 10pt;
+}
+QMainWindow { background: #0b0c0a; }
+QFrame#sidebar { background: #10110f; border-right: 1px solid #2d2a21; }
+QFrame#panel, QFrame#imagePanel, QFrame#headerPanel {
+  background: #151612; border: 1px solid #302e26; border-radius: 12px;
+}
+QLabel#brand { font-size: 18pt; font-weight: 700; color: #f3c477; }
+QLabel#sectionTitle { font-size: 13pt; font-weight: 650; }
+QLabel#mutedLabel { color: #b8b5ab; }
+QLabel#eyebrow { color: #d9b66d; font-size: 8pt; font-weight: 700; padding-top: 10px; }
+QLabel#predictionCard {
+  background: #1d2921; border: 1px solid #34513c; border-radius: 10px;
+  color: #70e0a8; font-size: 15pt; font-weight: 700; padding: 17px;
+}
+QLabel#disclaimer { color: #c3ad82; background: #211d14; border-radius: 8px; padding: 10px; font-size: 9pt; }
+QPushButton {
+  background: #1c1d19; color: #eeeade; border: 1px solid #39372d;
+  border-radius: 8px; padding: 9px 13px;
+}
+QPushButton:hover { background: #28271f; border-color: #c79c50; }
+QPushButton:pressed { background: #393020; }
+QPushButton#primaryButton { background: #f0c579; color: #17140e; border: 0; font-weight: 700; padding: 11px 17px; }
+QPushButton#primaryButton:hover { background: #ffda93; }
+QPushButton#navButton { text-align: left; border: 0; background: transparent; padding: 11px 13px; }
+QPushButton#navButton:checked { background: #302719; color: #ffd386; border-left: 3px solid #efbd68; }
+QPushButton:disabled { color: #77756e; background: #191a17; }
+QProgressBar { border: 0; border-radius: 4px; background: #292b26; max-height: 10px; }
+QProgressBar::chunk { background: #61d89d; border-radius: 4px; }
+QTabWidget::pane { border: 1px solid #343128; border-radius: 10px; background: #11120f; }
+QTabBar::tab { background: #171814; color: #b8b5ab; padding: 10px 15px; border: 0; }
+QTabBar::tab:selected { color: #f2cb82; border-bottom: 2px solid #e9b95f; }
+QScrollArea { border: 0; background: #0e0f0d; }
+QListWidget { background: #141511; border: 1px solid #302e26; border-radius: 9px; padding: 6px; }
+QListWidget::item { padding: 11px; border-bottom: 1px solid #292820; }

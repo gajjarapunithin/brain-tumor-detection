@@ -1,0 +1,2 @@
+# Optional desktop UI dependencies; install after the validated ML environment.
+PySide6-Essentials==6.10.0

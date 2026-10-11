@@ -1,0 +1,9 @@
+numpy==2.2.6
+pandas==2.3.3
+opencv-python==4.11.0.86
+Pillow==12.0.0
+scikit-learn==1.7.2
+matplotlib==3.10.8
+seaborn==0.13.2
+PyYAML==6.0.3
+tqdm==4.67.1
