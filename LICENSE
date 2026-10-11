@@ -1,21 +1,43 @@
-MIT License
+# NeuroScan AI — Medical and Research Disclaimer
 
-Copyright (c) 2026 Brain Tumor Detection Contributors
+**Copyright © 2026 NeuroScan AI Contributors. All rights reserved except as expressly granted by the applicable software license.**
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+## 1. Research and Educational Use Only
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+NeuroScan AI is an experimental software project intended for research, education, software development, and technical evaluation. It has not been established as a clinically validated medical device.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+## 2. No Medical Advice or Diagnosis
+
+The software, its source code, models, predictions, classifications, segmentation masks, visualizations, confidence scores, and other outputs are provided for informational and experimental purposes only. They do not constitute medical advice, a professional radiological interpretation, or a diagnosis of any disease or medical condition.
+
+## 3. No Clinical Reliance
+
+Do not use NeuroScan AI as the sole or decisive basis for diagnosing, screening, excluding, monitoring, or treating a medical condition, or for making decisions concerning patient care. Do not delay or avoid professional medical evaluation based on any output from this project. All medical decisions must be made by appropriately qualified healthcare professionals using independent clinical judgment and suitable clinical evidence.
+
+## 4. No Guarantee of Accuracy
+
+The software may produce incorrect, incomplete, inconsistent, misleading, or unreliable results, including false-positive and false-negative findings. Performance may vary with image quality, MRI acquisition protocols, patient populations, preprocessing, model weights, software configuration, and other factors. Experimental evaluation results do not establish clinical safety, effectiveness, generalizability, or regulatory approval.
+
+## 5. No Clinical Validation or Regulatory Authorization
+
+Unless expressly documented otherwise in a verifiable written authorization, the project has not been validated or authorized for clinical use by a competent regulatory authority. Users are responsible for determining whether their intended use requires clinical validation, regulatory authorization, professional oversight, or compliance with applicable laws.
+
+## 6. User Responsibility
+
+Users are responsible for evaluating the software's suitability for their intended purpose, verifying outputs independently, protecting confidential and personal health information, complying with applicable data protection laws, and obtaining all permissions required for datasets, model weights, dependencies, and other third-party materials.
+
+## 7. Disclaimer of Warranties and Limitation of Liability
+
+To the maximum extent permitted by applicable law, the project and its contributors provide the software and its outputs without warranties of any kind, whether express, implied, statutory, or otherwise, including warranties of merchantability, fitness for a particular purpose, accuracy, non-infringement, availability, and clinical suitability.
+
+To the maximum extent permitted by applicable law, the project's authors, contributors, maintainers, and copyright holders shall not be liable for any claim, damages, losses, or other liability arising from the software, its outputs, its use, inability to use it, or reliance on it, whether in contract, tort, or otherwise.
+
+Nothing in this disclaimer excludes or limits any liability, right, or remedy that cannot lawfully be excluded or limited under applicable law.
+
+## 8. No Endorsement
+
+Mention of any hospital, healthcare professional, institution, dataset, product, or third-party organization does not imply endorsement, affiliation, or approval unless expressly stated and verifiable.
+
+## 9. License Independence
+
+This disclaimer supplements, but does not replace, the applicable software license. Third-party components and datasets remain subject to their own licenses, terms, and restrictions.
